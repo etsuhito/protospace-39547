@@ -23,15 +23,15 @@ Things you may want to cover:
 
 * ...
 ## usersテーブル
- |
-| Column              | Type           | Options                   |
-| ---------------     | ----------     |-------------------------  |
-| email               | string         | NOT NULL UniqueConstraint |
-| encrypted_password  | string         | NOT NULL                  |
-| name                | string         | NOT NULL                  |
-| profile             | text           | not null                  |
-| occupation          | text           | not null                   |
-| position            | text           | not null                   |
+
+| Column              | Type           | Options                                |
+| ------------------- |----------------|----------------------------------------|
+| email               | string         | null: false, default:Uniq ueConstraint |
+| encrypted_password  | string         | not null: false                        |
+| name                | string         | not null: false                        |
+| profile             | text           | not null: false                        |
+| occupation          | text           | not null: false                        |
+| position            | text           | not null: false                        |
 
 ### Association
 - has_many :prototypes
