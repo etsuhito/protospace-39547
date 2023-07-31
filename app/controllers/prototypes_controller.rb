@@ -1,6 +1,8 @@
 class PrototypesController < ApplicationController
   before_action :set_prototype, only: [:edit, :show, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :contributor_confirmation, only: [:edit, :update, :destroy]
+
   #ログアウト状態のユーザーが特定のアクションを動かそうとした場合ログインページへ自動遷移するメソッド
 
   def index
